@@ -1,0 +1,86 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.akbarilh'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //selenium
+    implementation(group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.27.0')
+
+    //webdrivermanager
+    implementation(group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.9.2')
+
+    //library cucumber
+    testImplementation 'io.cucumber:cucumber-java:7.20.1'
+    testImplementation 'io.cucumber:cucumber-junit:7.20.1'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    //junit untuk api karena nemu error
+    testImplementation group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.11.2'
+
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.5.0'
+
+    implementation group: 'org.json', name: 'json', version: '20240303'
+    testImplementation group: 'io.rest-assured', name: 'json-path', version: '5.5.0'
+
+    //validasi skema json
+    implementation group: 'io.rest-assured', name: 'json-schema-validator', version: '5.5.0'
+
+    //library yang bantu untuk assertion respon dari api nanti
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.26.3'
+}
+
+test {
+    useJUnit()
+    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+}
+
+configurations {
+    cucumberRuntime{
+        extendsFrom testImplementation
+    }
+}
+
+def tags = (findProperty('tags') == null) ? 'not @exclude' : findProperty('tags')+' and not @exclude'
+
+tasks.register('demoblaze'){
+    description("Running Cucumber Test")
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'pretty',
+                    '--plugin', 'html:reports/cucumber-web.html', 'json:reports/cucumber-web.json',
+                    '--glue', 'stepDefWeb',
+                    '--tags', "${tags}",
+                    'src/test/resources/featureWeb']
+        }
+    }
+}
+
+tasks.register('dummyapi'){
+    description("Running Cucumber Test")
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'pretty',
+                    '--plugin', 'html:reports/cucumber-api.html', 'json:reports/cucumber-api.json',
+                    '--glue', 'stepDefApi',
+                    '--tags', "${tags}",
+                    'src/test/resources/featureApi']
+        }
+    }
+}
