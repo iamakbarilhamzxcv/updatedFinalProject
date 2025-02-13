@@ -10,7 +10,7 @@ public class CucumberHooks extends BaseTest {
 
     @Before
     public void beforeTest() {
-        this.getDriver();
+        getDriver();
     }
 
     @After

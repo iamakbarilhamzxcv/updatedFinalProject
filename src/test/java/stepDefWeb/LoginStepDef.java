@@ -16,49 +16,50 @@ public class LoginStepDef extends BaseTest {
 
     @Given("user go to the target web")
     public void userIsOnHomePage() {
-        this.loginPage = new LoginPage(driver);
-        this.loginPage.goToLoginPage();
+        loginPage = new LoginPage(driver);
+        loginPage.goToLoginPage();
     }
 
     @Then("user is on login page")
     public void userIsOnLoginPage() throws InterruptedException {
         Thread.sleep(Duration.ofMillis(4000L));
-        this.loginPage.validateOnLoginPage();
+        loginPage.validateOnLoginPage();
     }
 
     @And("user click the log in menu")
     public void userClickTheLogInMenu() {
-        this.loginPage.clickLoginMenu();
+        loginPage.clickLoginMenu();
     }
 
     @And("user input username on text box with {string}")
     public void userInputUsernameOnTextBoxWith(String username) {
-        this.loginPage.inputUsername(username);
+        loginPage.inputUsername(username);
     }
 
     @And("user input password on the text box  with {string}")
     public void userInputPasswordOnTheTextBoxWith(String password) {
-        this.loginPage.inputPassword(password);
+        loginPage.inputPassword(password);
     }
 
     @When("user click log in button")
     public void userClickLogInButton() {
-        this.loginPage.clickLoginButton();
+        loginPage.clickLoginButton();
     }
 
     @Then("user able to see alert error login")
-    public void userAbleToSeeAlertErrorLogin() {
-        this.loginPage.acceptAlertWrongPasswordLogin();
+    public void userAbleToSeeAlertErrorLogin() throws InterruptedException {
+        Thread.sleep(Duration.ofMillis(4000L));
+        loginPage.acceptAlertWrongPasswordLogin();
     }
 
     @Given("user already login with username {string} and password {string}")
     public void userAlreadyLoginWithUsernameAndPassword(String username, String password) {
-        this.loginPage = new LoginPage(driver);
-        this.loginPage.goToLoginPage();
-        this.loginPage.validateOnLoginPage();
-        this.loginPage.clickLoginMenu();
-        this.loginPage.inputUsername(username);
-        this.loginPage.inputPassword(password);
-        this.loginPage.clickLoginButton();
+        loginPage = new LoginPage(driver);
+        loginPage.goToLoginPage();
+        loginPage.validateOnLoginPage();
+        loginPage.clickLoginMenu();
+        loginPage.inputUsername(username);
+        loginPage.inputPassword(password);
+        loginPage.clickLoginButton();
     }
 }

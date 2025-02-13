@@ -16,71 +16,71 @@ public class HomeStepDef extends BaseTest {
     @Then("user will be redirect to home page")
     public void userWillBeRedirectToHomePage() throws InterruptedException {
         Thread.sleep(Duration.ofMillis(6000L));
-        this.homePage = new HomePage(driver);
-        this.homePage.validateOnHomePage();
+        homePage = new HomePage(driver);
+        homePage.validateOnHomePage();
     }
 
     @And("user click an item")
     public void userClickAnItem() {
-        this.homePage.clickAnItem();
+        homePage.clickAnItem();
     }
 
     @And("user click laptops categories")
     public void userClickLaptopsCategories() {
-        this.homePage.clickLaptopsCategories();
+        homePage.clickLaptopsCategories();
     }
 
     @And("user click another item")
     public void userClickAnotherItem() {
-        this.scrollPageOnce();
-        this.homePage.clickAnotherItem();
+        scrollPageOnce();
+        homePage.clickAnotherItem();
     }
 
     @When("user click cart menu")
     public void userClickCartMenu() {
-        this.homePage.clickCartMenu();
+        homePage.clickCartMenu();
     }
 
     @When("user click logout menu")
     public void userClickLogoutMenu() {
-        this.homePage.clickLogoutMenu();
+        homePage.clickLogoutMenu();
     }
 
     @When("user click contact menu")
     public void userClickContactMenu() {
-        this.homePage.clickContactMenu();
+        homePage.clickContactMenu();
     }
 
     @Then("user fill contact email and message")
     public void userFillContactEmailAndMessage() {
-        this.homePage.fillDataMessage();
+        homePage.fillDataMessage();
     }
 
     @And("user click send message button")
     public void userClickSendMessageButton() {
-        this.homePage.clickSendMessage();
+        homePage.clickSendMessage();
     }
 
     @And("user will see thanks pop up")
     public void userWillSeeThanksPopUp() throws InterruptedException {
         Thread.sleep(Duration.ofMillis(4000L));
-        this.homePage.acceptAlertThanksMessage();
+        homePage.acceptAlertThanksMessage();
     }
 
     @When("user click about us menu")
     public void userClickAboutUsMenu() {
-        this.homePage.clickAboutUsMenu();
+        homePage.clickAboutUsMenu();
     }
 
     @Then("user click video play button")
     public void userClickVideoPlayButton() throws InterruptedException {
-        this.homePage.playVideo();
+        homePage.playVideo();
         Thread.sleep(Duration.ofMillis(10000L));
-        this.homePage.validateVideoPlayed();
+        homePage.validateVideoPlayed();
     }
 
     @And("user click close video button")
     public void userClickCloseVideoButton() {
-        this.homePage.closeVideo();
+        homePage.closeVideo();
     }
 }

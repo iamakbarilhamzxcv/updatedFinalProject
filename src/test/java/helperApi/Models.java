@@ -12,12 +12,12 @@ public class Models {
     }
 
     public static void setupHeaders() {
-        request = RestAssured.given().headers("Content-Type", "application/json", new Object[0]).headers("Accept", "application/json", new Object[0]).headers("app-id", "63a804408eb0cb069b57e43a", new Object[0]);
+        request = RestAssured.given().headers("Content-Type", "application/json").headers("Accept", "application/json").headers("app-id", "63a804408eb0cb069b57e43a");
     }
 
     public static Response getListUsers(String endpoint) {
         setupHeaders();
-        return (Response)request.when().get(endpoint, new Object[0]);
+        return request.when().get(endpoint);
     }
 
     public static Response postCreateUser(String endpoint) {
@@ -31,14 +31,14 @@ public class Models {
         setupHeaders();
         String finalEndpoint = endpoint + "/create";
         System.out.println("Final Endpoint: " + finalEndpoint);
-        return (Response)request.body(payload.toString()).when().post(finalEndpoint, new Object[0]);
+        return request.body(payload.toString()).when().post(finalEndpoint);
     }
 
     public static Response deleteUser(String endpoint, String id) {
         setupHeaders();
         String finalEndpoint = endpoint + "/" + id;
         System.out.println("Final Endpoint: " + finalEndpoint);
-        return (Response)request.when().delete(finalEndpoint, new Object[0]);
+        return request.when().delete(finalEndpoint);
     }
 
     public static Response updateUser(String endpoint, String id) {
@@ -52,6 +52,6 @@ public class Models {
         payload.put("email", email);
         String finalEndpoint = endpoint + "/" + id;
         System.out.println("Final Endpoint: " + finalEndpoint);
-        return (Response)request.body(payload.toString()).when().put(finalEndpoint, new Object[0]);
+        return request.body(payload.toString()).when().put(finalEndpoint);
     }
 }

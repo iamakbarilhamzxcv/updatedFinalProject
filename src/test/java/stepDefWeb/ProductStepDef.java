@@ -14,24 +14,24 @@ public class ProductStepDef extends BaseTest {
 
     @Then("user will be redirect to product page")
     public void userWillBeRedirectToProductPage() {
-        this.productPage = new ProductPage(driver);
-        this.productPage.validateProductPictureExist();
-        this.productPage.validateProductDescriptionExist();
+        productPage = new ProductPage(driver);
+        productPage.validateProductPictureExist();
+        productPage.validateProductDescriptionExist();
     }
 
     @When("user click add to cart button")
     public void userClickAddToCartButton() {
-        this.productPage.clickAddToCart();
+        productPage.clickAddToCart();
     }
 
     @Then("user able to see alert product added")
     public void userAbleToSeeAlertProductAdded() throws InterruptedException {
         Thread.sleep(Duration.ofMillis(4000L));
-        this.productPage.acceptAlertProductAdded();
+        productPage.acceptAlertProductAdded();
     }
 
     @When("user click home menu")
     public void userClickHomeMenu() {
-        this.productPage.clickHomeMenu();
+        productPage.clickHomeMenu();
     }
 }

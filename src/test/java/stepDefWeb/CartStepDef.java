@@ -15,17 +15,17 @@ public class CartStepDef extends BaseTest {
 
     @Then("user will be redirect to cart page")
     public void userWillBeRedirectToCartPage() {
-        this.cartPage = new CartPage(driver);
-        this.cartPage.validateOnCartPage();
+        cartPage = new CartPage(driver);
+        cartPage.validateOnCartPage();
     }
 
     @And("user will see item to buy")
     public void userWillNotSeeExistingItemToBuy() {
         try {
-            this.cartPage.validateTableBodyNotEmpty();
-            int itemCount = this.cartPage.getCartItemCount();
+            cartPage.validateTableBodyNotEmpty();
+            int itemCount = cartPage.getCartItemCount();
             System.out.println("Validation passed: " + itemCount + " item(s) exist in the cart.");
-            this.cartPage.getItemDetails();
+            cartPage.getItemDetails();
         } catch (AssertionError var2) {
             AssertionError bodyTableCart = var2;
             System.err.println("Validation failed: No items found in the cart.");
@@ -36,33 +36,33 @@ public class CartStepDef extends BaseTest {
 
     @And("user will see total price equals to sum of each item price")
     public void userWillSeeTotalPriceEqualsToSumOfEachItemPrice() {
-        this.cartPage.validateTotalPrice();
+        cartPage.validateTotalPrice();
     }
 
     @When("user click place order button")
     public void userClickPlaceOrderButton() {
-        this.cartPage.clickPlaceOrderButton();
+        cartPage.clickPlaceOrderButton();
     }
 
     @Then("user fill the required data")
     public void userFillTheRequiredData() {
-        this.cartPage.fillOrderForm();
+        cartPage.fillOrderForm();
     }
 
     @And("user click purchase button")
     public void userClickPurchaseButton() throws InterruptedException {
         Thread.sleep(Duration.ofMillis(4000L));
-        this.cartPage.clickPurchaseButton();
+        cartPage.clickPurchaseButton();
     }
 
     @Then("user will see success purchase pop up")
     public void userWillSeeSuccessPurchasePopUp() {
-        this.cartPage.validatePopupSuccessPurchase();
+        cartPage.validatePopupSuccessPurchase();
     }
 
     @And("user click ok button")
     public void userClickOkButton() {
-        this.cartPage.clickOkButtonOrder();
+        cartPage.clickOkButtonOrder();
     }
 
     @Then("user click delete item")
@@ -70,10 +70,10 @@ public class CartStepDef extends BaseTest {
         Thread.sleep(Duration.ofMillis(4000L));
 
         try {
-            this.cartPage.validateTableBodyNotEmpty();
-            int itemCount = this.cartPage.getCartItemCount();
+            cartPage.validateTableBodyNotEmpty();
+            int itemCount = cartPage.getCartItemCount();
             System.out.println("Validation passed: " + itemCount + " item(s) exist in the cart.");
-            this.cartPage.clickDeleteButton();
+            cartPage.clickDeleteButton();
         } catch (AssertionError var2) {
             AssertionError bodyTableCart = var2;
             System.err.println("Validation failed: No items found in the cart.");
@@ -86,6 +86,6 @@ public class CartStepDef extends BaseTest {
     @And("user will see alert to fill out the data")
     public void userWillSeeAlertToFillOutTheData() throws InterruptedException {
         Thread.sleep(Duration.ofMillis(4000L));
-        this.cartPage.acceptAlertToFillData();
+        cartPage.acceptAlertToFillData();
     }
 }

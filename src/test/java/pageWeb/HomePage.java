@@ -29,68 +29,68 @@ public class HomePage {
     }
 
     public void validateOnHomePage() {
-        WebElement nameOfUserElement = this.driver.findElement(this.nameOfUser);
+        WebElement nameOfUserElement = driver.findElement(nameOfUser);
         Assertions.assertTrue(nameOfUserElement.isDisplayed());
         Assertions.assertEquals("Welcome moblaze11", nameOfUserElement.getText());
     }
 
     public void clickAnItem() {
-        this.driver.findElement(this.samsungGalaxys6).click();
+        driver.findElement(samsungGalaxys6).click();
     }
 
     public void clickLaptopsCategories() {
-        this.driver.findElement(this.laptopCategories).click();
+        driver.findElement(laptopCategories).click();
     }
 
     public void clickAnotherItem() {
-        this.driver.findElement(this.macBookPro).click();
+        driver.findElement(macBookPro).click();
     }
 
     public void clickCartMenu() {
-        this.driver.findElement(this.cartMenu).click();
+        driver.findElement(cartMenu).click();
     }
 
     public void clickLogoutMenu() {
-        this.driver.findElement(this.logoutMenu).click();
+        driver.findElement(logoutMenu).click();
     }
 
     public void clickContactMenu() {
-        this.driver.findElement(this.contactMenu).click();
+        driver.findElement(contactMenu).click();
     }
 
     public void fillDataMessage() {
-        this.driver.findElement(this.inputContactEmail).sendKeys(new CharSequence[]{"emailtujuan@gmail.com"});
-        this.driver.findElement(this.inputContactName).sendKeys(new CharSequence[]{"Sahabat Pena"});
-        this.driver.findElement(this.inputMessage).sendKeys(new CharSequence[]{"Id: 1968893 ->xpath: /html/body/div[10]/p/text()[1]\nAmount: 1460 USD -> xpath : /html/body/div[10]/p/text()[2]\nCard Number: 112233 -> xpath: /html/body/div[10]/p/text()[3]\nName: Akbar Ilham -> xpath: /html/body/div[10]/p/text()[4]\nDate: 29/0/2025 -> xpath: /html/body/div[10]/p/text()[5]"});
+        driver.findElement(inputContactEmail).sendKeys("emailtujuan@gmail.com");
+        driver.findElement(inputContactName).sendKeys("Sahabat Pena");
+        driver.findElement(inputMessage).sendKeys("Id: 1968893 ->xpath: /html/body/div[10]/p/text()[1]\nAmount: 1460 USD -> xpath : /html/body/div[10]/p/text()[2]\nCard Number: 112233 -> xpath: /html/body/div[10]/p/text()[3]\nName: Akbar Ilham -> xpath: /html/body/div[10]/p/text()[4]\nDate: 29/0/2025 -> xpath: /html/body/div[10]/p/text()[5]");
     }
 
     public void clickSendMessage() {
-        this.driver.findElement(this.sendMessageButton).click();
+        driver.findElement(sendMessageButton).click();
     }
 
     public void acceptAlertThanksMessage() {
-        Alert alert = this.driver.switchTo().alert();
+        Alert alert = driver.switchTo().alert();
         String alertText = alert.getText();
         System.out.println("Alert Text: " + alertText);
         alert.accept();
     }
 
     public void clickAboutUsMenu() {
-        this.driver.findElement(this.aboutUsMenu).click();
+        driver.findElement(aboutUsMenu).click();
     }
 
     public void playVideo() {
-        this.driver.findElement(this.playVideoButton).click();
+        driver.findElement(playVideoButton).click();
     }
 
     public void validateVideoPlayed() {
-        WebElement video = this.driver.findElement(By.tagName("video"));
-        JavascriptExecutor js = (JavascriptExecutor)this.driver;
+        WebElement video = driver.findElement(By.tagName("video"));
+        JavascriptExecutor js = (JavascriptExecutor)driver;
         Boolean isPlaying = (Boolean)js.executeScript("return arguments[0].paused === false && arguments[0].readyState >= 3;", new Object[]{video});
         Assertions.assertTrue(isPlaying, "Video tidak berjalan dengan baik");
     }
 
     public void closeVideo() {
-        this.driver.findElement(this.closeVideoButton).click();
+        driver.findElement(closeVideoButton).click();
     }
 }

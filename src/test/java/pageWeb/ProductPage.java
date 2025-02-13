@@ -18,27 +18,27 @@ public class ProductPage {
     }
 
     public void validateProductPictureExist() {
-        WebElement imageElement = this.driver.findElement(this.productImage);
+        WebElement imageElement = driver.findElement(productImage);
         Assert.assertTrue(imageElement.isDisplayed());
     }
 
     public void validateProductDescriptionExist() {
-        WebElement descriptionElement = this.driver.findElement(this.productDesc);
+        WebElement descriptionElement = driver.findElement(productDesc);
         Assert.assertTrue(descriptionElement.isDisplayed());
     }
 
     public void clickAddToCart() {
-        this.driver.findElement(this.addToCartButton).click();
+        driver.findElement(addToCartButton).click();
     }
 
     public void acceptAlertProductAdded() {
-        Alert alert = this.driver.switchTo().alert();
+        Alert alert = driver.switchTo().alert();
         String alertText = alert.getText();
         System.out.println("Alert Text: " + alertText);
         alert.accept();
     }
 
     public void clickHomeMenu() {
-        this.driver.findElement(this.homeMenu).click();
+        driver.findElement(homeMenu).click();
     }
 }

@@ -18,33 +18,33 @@ public class LoginPage {
     }
 
     public void goToLoginPage() {
-        this.driver.get("https://www.demoblaze.com/");
+        driver.get("https://www.demoblaze.com/");
     }
 
     public void validateOnLoginPage() {
-        WebElement loginElement = this.driver.findElement(this.loginMenu);
+        WebElement loginElement = driver.findElement(loginMenu);
         Assertions.assertTrue(loginElement.isDisplayed());
         Assertions.assertEquals("Log in", loginElement.getText());
     }
 
     public void clickLoginMenu() {
-        this.driver.findElement(this.loginMenu).click();
+        driver.findElement(loginMenu).click();
     }
 
     public void inputUsername(String username) {
-        this.driver.findElement(this.usernameInputText).sendKeys(new CharSequence[]{username});
+        driver.findElement(usernameInputText).sendKeys(username);
     }
 
     public void inputPassword(String password) {
-        this.driver.findElement(this.passwordInputText).sendKeys(new CharSequence[]{password});
+        driver.findElement(passwordInputText).sendKeys(password);
     }
 
     public void clickLoginButton() {
-        this.driver.findElement(this.loginButton).click();
+        driver.findElement(loginButton).click();
     }
 
     public void acceptAlertWrongPasswordLogin() {
-        Alert alert = this.driver.switchTo().alert();
+        Alert alert = driver.switchTo().alert();
         String alertText = alert.getText();
         System.out.println("Alert Text: " + alertText);
         alert.accept();
