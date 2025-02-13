@@ -15,7 +15,7 @@ public class HomeStepDef extends BaseTest {
 
     @Then("user will be redirect to home page")
     public void userWillBeRedirectToHomePage() throws InterruptedException {
-        Thread.sleep(Duration.ofMillis(6000L));
+        Thread.sleep(Duration.ofMillis(6000));
         homePage = new HomePage(driver);
         homePage.validateOnHomePage();
     }
@@ -63,7 +63,7 @@ public class HomeStepDef extends BaseTest {
 
     @And("user will see thanks pop up")
     public void userWillSeeThanksPopUp() throws InterruptedException {
-        Thread.sleep(Duration.ofMillis(4000L));
+        Thread.sleep(Duration.ofMillis(4000));
         homePage.acceptAlertThanksMessage();
     }
 
@@ -75,7 +75,7 @@ public class HomeStepDef extends BaseTest {
     @Then("user click video play button")
     public void userClickVideoPlayButton() throws InterruptedException {
         homePage.playVideo();
-        Thread.sleep(Duration.ofMillis(10000L));
+        Thread.sleep(Duration.ofMillis(10000));
         homePage.validateVideoPlayed();
     }
 
