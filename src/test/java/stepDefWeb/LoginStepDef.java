@@ -22,7 +22,7 @@ public class LoginStepDef extends BaseTest {
 
     @Then("user is on login page")
     public void userIsOnLoginPage() throws InterruptedException {
-        Thread.sleep(Duration.ofMillis(4000));
+        Thread.sleep(4000);
         loginPage.validateOnLoginPage();
     }
 
@@ -48,7 +48,7 @@ public class LoginStepDef extends BaseTest {
 
     @Then("user able to see alert error login")
     public void userAbleToSeeAlertErrorLogin() throws InterruptedException {
-        Thread.sleep(Duration.ofMillis(4000));
+        Thread.sleep(4000);
         loginPage.acceptAlertWrongPasswordLogin();
     }
 

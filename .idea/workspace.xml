@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aff9c764-6b06-4593-8fb3-4bece6fbc4c3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefWeb/CartStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefWeb/CartStepDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefWeb/HomeStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefWeb/HomeStepDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefWeb/LoginStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefWeb/LoginStepDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefWeb/ProductStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefWeb/ProductStepDef.java" afterDir="false" />
@@ -43,37 +41,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cucumber Java.Feature: allFeatrue.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: api.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Login with invalid username and password.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Login with valid username and password.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Test create new user normal.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Test delete user normal.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Test get list data normal.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Test update user normal.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: add one item without scrolling page.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: add two item with scrolling page.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: checkout the added items and not fill the required data.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: checkout the added items.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: checkout the not added items.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: delete one item.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: testing allfeature from login, add to cart, checkout, delete item, play video, send message, and logout.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: user can play video about us.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: user can send message.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: user logout from home page.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build backup.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CucumberTestApi.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CucumberTestWeb.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Akbar Ilham/IdeaProjects/backup/src/main/java/org/akbarilh/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Feature: allFeatrue.executor": "Run",
+    "Cucumber Java.Feature: api.executor": "Run",
+    "Cucumber Java.Feature: deleteItem.executor": "Run",
+    "Cucumber Java.Scenario: Login with invalid username and password.executor": "Run",
+    "Cucumber Java.Scenario: Login with valid username and password.executor": "Run",
+    "Cucumber Java.Scenario: Test create new user normal.executor": "Run",
+    "Cucumber Java.Scenario: Test delete user normal.executor": "Run",
+    "Cucumber Java.Scenario: Test get list data normal.executor": "Run",
+    "Cucumber Java.Scenario: Test update user normal.executor": "Run",
+    "Cucumber Java.Scenario: add one item without scrolling page.executor": "Run",
+    "Cucumber Java.Scenario: add two item with scrolling page.executor": "Run",
+    "Cucumber Java.Scenario: checkout the added items and not fill the required data.executor": "Run",
+    "Cucumber Java.Scenario: checkout the added items.executor": "Run",
+    "Cucumber Java.Scenario: checkout the not added items.executor": "Run",
+    "Cucumber Java.Scenario: delete one item.executor": "Run",
+    "Cucumber Java.Scenario: testing allfeature from login, add to cart, checkout, delete item, play video, send message, and logout.executor": "Run",
+    "Cucumber Java.Scenario: user can play video about us.executor": "Run",
+    "Cucumber Java.Scenario: user can send message.executor": "Run",
+    "Cucumber Java.Scenario: user logout from home page.executor": "Run",
+    "Gradle.Build backup.executor": "Run",
+    "Gradle.CucumberTestApi.executor": "Run",
+    "Gradle.CucumberTestWeb.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/Akbar Ilham/IdeaProjects/backup/src/main/java/org/akbarilh/Main.java",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
-  <component name="RunManager" selected="Cucumber Java.Feature: allFeatrue">
+}]]></component>
+  <component name="RunManager" selected="Cucumber Java.Scenario: add two item with scrolling page">
     <configuration name="Feature: allFeatrue" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/allFeatrue.feature" />
@@ -82,6 +81,45 @@
       <module name="backup.test" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
       <option name="SUGGESTED_NAME" value="Feature: allFeatrue" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: deleteItem" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/deleteItem.feature" />
+      <option name="GLUE" value="stepDefWeb stepDefApi" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="backup.test" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: deleteItem" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: add two item with scrolling page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/addToCart.feature" />
+      <option name="GLUE" value="stepDefWeb stepDefApi" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="backup.test" />
+      <option name="NAME_FILTER" value="^add two item with scrolling page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^add two item with scrolling page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: add two item with scrolling page" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -102,46 +140,6 @@
       <option name="NAME_FILTER" value="^testing allfeature from login\, add to cart\, checkout\, delete item\, play video\, send message\, and logout$" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^testing allfeature from login\, add to cart\, checkout\, delete item\, play video\, send message\, and logout$&quot;" />
       <option name="SUGGESTED_NAME" value="Scenario: testing allfeature from login, add to cart, checkout, delete item, play video, send message, and logout" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: user can play video about us" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/playVideoAboutUs.feature" />
-      <option name="GLUE" value="stepDefWeb stepDefApi" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="backup.test" />
-      <option name="NAME_FILTER" value="^user can play video about us$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^user can play video about us$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: user can play video about us" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: user can send message" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/sendMessage.feature" />
-      <option name="GLUE" value="stepDefWeb stepDefApi" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="backup.test" />
-      <option name="NAME_FILTER" value="^user can send message$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^user can send message$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: user can send message" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -192,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: add two item with scrolling page" />
+        <item itemvalue="Cucumber Java.Feature: deleteItem" />
         <item itemvalue="Cucumber Java.Feature: allFeatrue" />
         <item itemvalue="Gradle.CucumberTestWeb" />
         <item itemvalue="Cucumber Java.Scenario: testing allfeature from login, add to cart, checkout, delete item, play video, send message, and logout" />
-        <item itemvalue="Cucumber Java.Scenario: user can send message" />
-        <item itemvalue="Cucumber Java.Scenario: user can play video about us" />
       </list>
     </recent_temporary>
   </component>

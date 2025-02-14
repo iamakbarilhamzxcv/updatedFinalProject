@@ -26,7 +26,7 @@ public class ProductStepDef extends BaseTest {
 
     @Then("user able to see alert product added")
     public void userAbleToSeeAlertProductAdded() throws InterruptedException {
-        Thread.sleep(Duration.ofMillis(4000));
+        Thread.sleep(4000);
         productPage.acceptAlertProductAdded();
     }
 
