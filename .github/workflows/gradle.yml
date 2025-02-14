@@ -1,5 +1,6 @@
-name: Web & API Automation Workflow
+name: Web Automation Workflow
 
+#Events
 on:
   push:
     branches: [ "master" ]
@@ -8,42 +9,50 @@ on:
   workflow_dispatch:
 
 jobs:
-  web-test:
+  run-automation-test:
+    # VM
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+    # download repo
+    - uses: actions/checkout@v4
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
+    # Setup Java
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+    
+    # Install Browser
+    - name: Setup Chrome
+      uses: browser-actions/setup-chrome@v1.7.2
+          
+    # Setup Gradlew
+    - name: Setup gradlew
+      run: chmod +x gradlew
 
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v1.7.2
-
-      - name: Setup gradlew
-        run: chmod +x gradlew
-
-      - name: Execute Web Test
-        run: ./gradlew demoblaze -Ptags="@web"
+    # Execution gradlew command for runing cumcumber
+    - name: Execute test
+      run: ./gradlew demoblaze -Ptags="@web"
 
 
-      - name: Archive Test Report
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: Cucumber-Web-Report
-          path: reports
+    # Archive test result
+    - name: Archive test result
+      uses: actions/upload-artifact@v4.5.0
+      if: always()
+      with:
+        name: Cucumber Report
+        path: reports
 
-      - name: Rename cucumber-web.html to index-web.html
-        run: mv reports/cucumber-web.html reports/index-web.html
-
-        # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v4.0.0
-        with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: reports
+    # Rename cucumber-web.html to index-web.html
+    - name: Rename cucumber-web.html to index-web.html
+      run: mv reports/cucumber-web.html reports/index-web.html
+    
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v4.0.0
+      with:
+        personal_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: reports
