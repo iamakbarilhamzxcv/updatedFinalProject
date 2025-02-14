@@ -36,8 +36,8 @@ jobs:
           name: Cucumber-Web-Report
           path: reports
 
-      - name: Rename cucumber-web.html to index-web.html
-        run: mv reports/cucumber-web.html reports/index-web.html
+      - name: Rename cucumber-web.html to index.html
+        run: mv reports/cucumber-web.html reports/index.html
 
       - name: Deploy Web Test Report to GitHub Pages
         if: always()
@@ -71,8 +71,8 @@ jobs:
           name: Cucumber-API-Report
           path: reports
 
-      - name: Rename cucumber-api.html to index-api.html
-        run: mv reports/cucumber-api.html reports/index-api.html
+      - name: Rename cucumber-api.html to index.html
+        run: mv reports/cucumber-api.html reports/index.html
 
       - name: Deploy API Test Report to GitHub Pages
         if: always()
