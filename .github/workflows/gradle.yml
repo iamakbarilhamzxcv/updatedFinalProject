@@ -29,22 +29,7 @@ jobs:
       - name: Execute Web Test
         run: ./gradlew demoblaze -Ptags="@web"
 
-      - name: Archive Web Test Report
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: Cucumber-Web-Report
-          path: reports
-
-      - name: Rename cucumber-web.html to index.html
-        run: mv reports/cucumber-web.html reports/index.html
-
-      - name: Deploy Web Test Report to GitHub Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v4.0.0
-        with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: reports
+        
 
   api-test:
     runs-on: ubuntu-latest
@@ -64,15 +49,41 @@ jobs:
       - name: Execute API Test
         run: ./gradlew dummyapi -Ptags="@api"
 
-      - name: Archive API Test Report
+
+
+      - name: Buat index.html untuk gabungan laporan
+        run: |
+          echo '<!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Test Reports</title>
+              <style>
+                  body { font-family: Arial, sans-serif; text-align: center; }
+                  iframe { width: 90%; height: 500px; border: none; margin: 10px; }
+              </style>
+          </head>
+          <body>
+              <h1>Test Reports</h1>
+              <h2>Cucumber Web Report</h2>
+              <iframe src="cucumber-web.html"></iframe>
+              <h2>Cucumber API Report</h2>
+              <iframe src="cucumber-api.html"></iframe>
+          </body>
+          </html>' > reports/index.html
+
+
+      - name: Pastikan reports ada
+        run: |
+          ls -la reports/
+
+      - name: Archive Test Report
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: Cucumber-API-Report
           path: reports
-
-      - name: Rename cucumber-api.html to index.html
-        run: mv reports/cucumber-api.html reports/index.html
 
       - name: Deploy API Test Report to GitHub Pages
         if: always()
