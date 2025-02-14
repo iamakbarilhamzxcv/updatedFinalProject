@@ -51,7 +51,7 @@ public class CartStepDef extends BaseTest {
 
     @And("user click purchase button")
     public void userClickPurchaseButton() throws InterruptedException {
-        Thread.sleep(Duration.ofMillis(4000));
+        Thread.sleep(4000);
         cartPage.clickPurchaseButton();
     }
 
@@ -67,7 +67,7 @@ public class CartStepDef extends BaseTest {
 
     @Then("user click delete item")
     public void userClickDeleteItem() throws InterruptedException {
-        Thread.sleep(Duration.ofMillis(4000));
+        Thread.sleep(4000);
 
         try {
             cartPage.validateTableBodyNotEmpty();
@@ -80,12 +80,12 @@ public class CartStepDef extends BaseTest {
             System.err.println("Error: " + bodyTableCart.getMessage());
         }
 
-        Thread.sleep(Duration.ofMillis(4000));
+        Thread.sleep(4000);;
     }
 
     @And("user will see alert to fill out the data")
     public void userWillSeeAlertToFillOutTheData() throws InterruptedException {
-        Thread.sleep(Duration.ofMillis(4000));
+        Thread.sleep(4000);
         cartPage.acceptAlertToFillData();
     }
 }
