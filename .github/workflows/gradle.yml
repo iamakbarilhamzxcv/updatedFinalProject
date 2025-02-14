@@ -29,10 +29,16 @@ jobs:
       - name: Execute Web Test
         run: ./gradlew demoblaze -Ptags="@web"
 
-        
+      - name: Archive Web Test Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Cucumber-Web-Report
+          path: reports/cucumber-web.html
 
   api-test:
     runs-on: ubuntu-latest
+    needs: web-test  # Pastikan API Test menunggu Web Test selesai
 
     steps:
       - uses: actions/checkout@v4
@@ -49,7 +55,11 @@ jobs:
       - name: Execute API Test
         run: ./gradlew dummyapi -Ptags="@api"
 
-
+      - name: Download Web Test Report
+        uses: actions/download-artifact@v4
+        with:
+          name: Cucumber-Web-Report
+          path: reports/
 
       - name: Buat index.html untuk gabungan laporan
         run: |
@@ -73,19 +83,18 @@ jobs:
           </body>
           </html>' > reports/index.html
 
-
       - name: Pastikan reports ada
         run: |
           ls -la reports/
 
-      - name: Archive Test Report
+      - name: Archive Combined Test Report
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: Cucumber-API-Report
-          path: reports
+          name: Cucumber-Web-API-Report
+          path: reports/
 
-      - name: Deploy API Test Report to GitHub Pages
+      - name: Deploy Reports to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
