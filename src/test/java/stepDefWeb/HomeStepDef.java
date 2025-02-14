@@ -15,7 +15,7 @@ public class HomeStepDef extends BaseTest {
 
     @Then("user will be redirect to home page")
     public void userWillBeRedirectToHomePage() throws InterruptedException {
-        Thread.sleep(Duration.ofMillis(10000));
+        Thread.sleep(Duration.ofMillis(6000));
         homePage = new HomePage(driver);
         homePage.validateOnHomePage();
     }
