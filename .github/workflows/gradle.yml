@@ -24,10 +24,10 @@ jobs:
         uses: browser-actions/setup-chrome@v1.7.2
 
       - name: Setup gradlew
-        run: chmod u+x gradlew
+        run: chmod +x gradlew
 
       - name: Execute Web Test
-        run: ./gradlew demoblaze
+        run: ./gradlew demoblaze -Ptags="@web"
 
       - name: Archive Web Test Report
         uses: actions/upload-artifact@v4
@@ -59,10 +59,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup gradlew
-        run: chmod u+x gradlew
+        run: chmod +x gradlew
 
       - name: Execute API Test
-        run: ./gradlew dummyapi
+        run: ./gradlew dummyapi -Ptags="@api"
 
       - name: Archive API Test Report
         uses: actions/upload-artifact@v4
