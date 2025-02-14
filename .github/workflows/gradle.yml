@@ -29,24 +29,19 @@ jobs:
       - name: Execute Web Test
         run: ./gradlew demoblaze -Ptags="@web"
 
-      - name: Execute Api Test
-        run: ./gradlew dummyapi -Ptags="@api"
-
 
       - name: Archive Test Report
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: Cucumber-Report
+          name: Cucumber-Web-Report
           path: reports
-
-      - name: Rename cucumber-api.html to index-api.html
-        run: mv reports/cucumber-api.html reports/index-api.html
 
       - name: Rename cucumber-web.html to index-web.html
         run: mv reports/cucumber-web.html reports/index-web.html
 
-      - name: Deploy API Test Report to GitHub Pages
+        # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
