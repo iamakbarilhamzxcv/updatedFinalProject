@@ -29,38 +29,6 @@ jobs:
       - name: Execute Web Test
         run: ./gradlew demoblaze -Ptags="@web"
 
-      - name: Archive Web Test Report
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: Cucumber-Web-Report
-          path: reports
-
-      - name: Rename cucumber-web.html to index-web.html
-        run: mv reports/cucumber-web.html reports/index-web.html
-
-      - name: Deploy Web Test Report to GitHub Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v4.0.0
-        with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: reports
-
-  api-test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up JDK 21
-        uses: actions/setup-java@v4
-        with:
-          java-version: '21'
-          distribution: 'temurin'
-
-      - name: Setup gradlew
-        run: chmod +x gradlew
-
       - name: Execute API Test
         run: ./gradlew dummyapi -Ptags="@api"
 
@@ -68,9 +36,12 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: Cucumber-API-Report
+          name: Cucumber-Report
           path: reports
 
+      - name: Rename cucumber-web.html to index-web.html
+        run: mv reports/cucumber-web.html reports/index-web.html
+        
       - name: Rename cucumber-api.html to index-api.html
         run: mv reports/cucumber-api.html reports/index-api.html
 
