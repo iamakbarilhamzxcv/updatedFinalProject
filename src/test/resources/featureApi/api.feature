@@ -35,3 +35,10 @@ Feature: Test Automation Rest Api
     And hit api update data
     Then validation status code is equals to 200
     Then validation response body update user
+
+  @api
+  Scenario: Test create new user with invalid data
+    Given prepare url valid for "CREATE_NEW_USERS"
+    And hit api post create new user with invalid payload
+    Then validation status code is equals to 400
+    Then validation response error message

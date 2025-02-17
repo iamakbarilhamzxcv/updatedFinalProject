@@ -1,4 +1,4 @@
-@addToCart
+@web
 Feature: Add to cart
 
   Background:

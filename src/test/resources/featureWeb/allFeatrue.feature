@@ -5,7 +5,7 @@ Feature: all feature
     Given user already login with username "moblaze11" and password "@Testing123"
     Then user will be redirect to home page
 
-  @web-allfeature
+  @allfeature
   Scenario: testing allfeature from login, add to cart, checkout, delete item, play video, send message, and logout
     And user click an item
     Then user will be redirect to product page

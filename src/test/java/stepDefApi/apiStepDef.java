@@ -60,4 +60,14 @@ public class apiStepDef {
     public void validationResponseBodyUpdateUser() {
         apiPage.validationResponseBodyUpdateUser();
     }
+
+    @And("hit api post create new user with invalid payload")
+    public void hitApiPostCreateNewUserWithInvalidPayload() {
+        apiPage.hitApiPostCreateNewUserWithInvalidPayload();
+    }
+
+    @Then("validation response error message")
+    public void validationResponseErrorMessage() {
+        apiPage.validationResponseErrorMessage();
+    }
 }

@@ -1,4 +1,4 @@
-@playVideo
+@web
 Feature: Play Video
   Background:
     Given user already login with username "moblaze11" and password "@Testing123"

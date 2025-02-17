@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aff9c764-6b06-4593-8fb3-4bece6fbc4c3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/cucumber-web.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/cucumber-web.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/cucumber-web.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/cucumber-web.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helperApi/Endpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helperApi/Endpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helperApi/Models.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helperApi/Models.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageApi/ApiPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageApi/ApiPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefApi/apiStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefApi/apiStepDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefWeb/HomeStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefWeb/HomeStepDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefWeb/LoginStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefWeb/LoginStepDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefWeb/ProductStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefWeb/ProductStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/featureApi/api.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/featureApi/api.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/featureWeb/addToCart.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/featureWeb/addToCart.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/featureWeb/allFeatrue.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/featureWeb/allFeatrue.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/featureWeb/checkOut.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/featureWeb/checkOut.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/featureWeb/deleteItem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/featureWeb/deleteItem.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/featureWeb/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/featureWeb/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/featureWeb/logout.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/featureWeb/logout.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/featureWeb/playVideoAboutUs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/featureWeb/playVideoAboutUs.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/featureWeb/sendMessage.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/featureWeb/sendMessage.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +59,12 @@
   "keyToString": {
     "Cucumber Java.Feature: allFeatrue.executor": "Run",
     "Cucumber Java.Feature: api.executor": "Run",
+    "Cucumber Java.Feature: checkOut.executor": "Run",
     "Cucumber Java.Feature: deleteItem.executor": "Run",
     "Cucumber Java.Scenario: Login with invalid username and password.executor": "Run",
     "Cucumber Java.Scenario: Login with valid username and password.executor": "Run",
     "Cucumber Java.Scenario: Test create new user normal.executor": "Run",
+    "Cucumber Java.Scenario: Test create new user with invalid data.executor": "Run",
     "Cucumber Java.Scenario: Test delete user normal.executor": "Run",
     "Cucumber Java.Scenario: Test get list data normal.executor": "Run",
     "Cucumber Java.Scenario: Test update user normal.executor": "Run",
@@ -72,15 +88,15 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: add two item with scrolling page">
-    <configuration name="Feature: allFeatrue" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Gradle.CucumberTestWeb">
+    <configuration name="Feature: api" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/allFeatrue.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureApi/api.feature" />
       <option name="GLUE" value="stepDefWeb stepDefApi" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="backup.test" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: allFeatrue" />
+      <option name="SUGGESTED_NAME" value="Feature: api" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -92,14 +108,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: deleteItem" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: checkOut" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/deleteItem.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/checkOut.feature" />
       <option name="GLUE" value="stepDefWeb stepDefApi" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="backup.test" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: deleteItem" />
+      <option name="SUGGESTED_NAME" value="Feature: checkOut" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -111,15 +127,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: add two item with scrolling page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: checkout the added items" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/addToCart.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/checkOut.feature" />
       <option name="GLUE" value="stepDefWeb stepDefApi" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="backup.test" />
-      <option name="NAME_FILTER" value="^add two item with scrolling page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^add two item with scrolling page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: add two item with scrolling page" />
+      <option name="NAME_FILTER" value="^checkout the added items$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^checkout the added items$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: checkout the added items" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -131,15 +147,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: testing allfeature from login, add to cart, checkout, delete item, play video, send message, and logout" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: checkout the not added items" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/allFeatrue.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureWeb/checkOut.feature" />
       <option name="GLUE" value="stepDefWeb stepDefApi" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="backup.test" />
-      <option name="NAME_FILTER" value="^testing allfeature from login\, add to cart\, checkout\, delete item\, play video\, send message\, and logout$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^testing allfeature from login\, add to cart\, checkout\, delete item\, play video\, send message\, and logout$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: testing allfeature from login, add to cart, checkout, delete item, play video, send message, and logout" />
+      <option name="NAME_FILTER" value="^checkout the not added items$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^checkout the not added items$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: checkout the not added items" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -190,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: add two item with scrolling page" />
-        <item itemvalue="Cucumber Java.Feature: deleteItem" />
-        <item itemvalue="Cucumber Java.Feature: allFeatrue" />
         <item itemvalue="Gradle.CucumberTestWeb" />
-        <item itemvalue="Cucumber Java.Scenario: testing allfeature from login, add to cart, checkout, delete item, play video, send message, and logout" />
+        <item itemvalue="Cucumber Java.Scenario: checkout the added items" />
+        <item itemvalue="Cucumber Java.Scenario: checkout the not added items" />
+        <item itemvalue="Cucumber Java.Feature: checkOut" />
+        <item itemvalue="Cucumber Java.Feature: api" />
       </list>
     </recent_temporary>
   </component>

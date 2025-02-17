@@ -1,4 +1,4 @@
-@checkout
+@web
 Feature: Checkout
 
   Background:
@@ -7,6 +7,13 @@ Feature: Checkout
 
   @checkout-ItemExist
   Scenario: checkout the added items
+    And user click an item
+    Then user will be redirect to product page
+    When user click add to cart button
+    Then user able to see alert product added
+    When user click home menu
+    Then user will be redirect to home page
+
     When user click cart menu
     Then user will be redirect to cart page
     And user will see item to buy
@@ -26,6 +33,13 @@ Feature: Checkout
 
   @checkout-ItemExistButNotFillRequiredData
   Scenario: checkout the added items and not fill the required data
+    And user click an item
+    Then user will be redirect to product page
+    When user click add to cart button
+    Then user able to see alert product added
+    When user click home menu
+    Then user will be redirect to home page
+
     When user click cart menu
     Then user will be redirect to cart page
     And user will see item to buy

@@ -1,4 +1,4 @@
-@logout
+@web
 Feature: Logout
 
   Background:

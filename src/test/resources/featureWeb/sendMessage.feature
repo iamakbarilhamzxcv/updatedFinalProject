@@ -1,4 +1,4 @@
-@message
+@web
 Feature: Send Message
 
   Background:

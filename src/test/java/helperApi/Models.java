@@ -54,4 +54,14 @@ public class Models {
         System.out.println("Final Endpoint: " + finalEndpoint);
         return request.body(payload.toString()).when().put(finalEndpoint);
     }
+
+    public static Response postCreateUserInvalidPayload(String endpoint) {
+
+        JSONObject payload = new JSONObject();
+
+        setupHeaders();
+        String finalEndpoint = endpoint + "/create";
+        System.out.println("Final Endpoint: " + finalEndpoint);
+        return request.body(payload.toString()).when().post(finalEndpoint);
+    }
 }
